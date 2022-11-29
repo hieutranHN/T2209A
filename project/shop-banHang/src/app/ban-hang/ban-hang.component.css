@@ -1,0 +1,36 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+
+table,tr,th,td{
+    border: 1px solid rgba(6, 32, 230, 0.818);
+    padding: 15px;
+    background-color:blanchedalmond
+}
+
+#id{
+    margin:13px 30px;
+}
+#soluong{
+    margin:13px 5px;
+}
+#gia{
+    margin:13px 38px;
+}
+#ten{
+    margin:13px 63px;
+}
+#danhmuc{
+    margin:13px 5px;
+}
+.them{
+    transition: 1.5s;
+    width: 100px;
+    height: 50px;
+    
+}
+.them:hover{
+    background-color: chartreuse;
+    transition:1.5s;
+    font-size: 21px;
+    overflow: hidden;
+    color:rgb(255, 28, 28);
+}

@@ -1,0 +1,39 @@
+
+<div class="container" style="color:rgb(0, 0, 0); font-family:Tahoma;background-color: rgb(204, 245, 245);" >
+<section style="text-xs-center">
+    <h1>*NIKE CHÍNH HÃNG*(limited)</h1>
+    <br>
+    <form>
+        <div>-ID(mã) : <input type="number" name="id" id="id" [(ngModel)]="id" required></div>
+        <div>-TÊN:<input type="text" name="ten" id="ten" [(ngModel)]="ten" placeholder="Tìm kiếm" required></div>
+        <div>-SỐ LƯỢNG : <input type="number" name="soluong" id="soluong" [(ngModel)]="soluong"></div>
+        <div>-GIÁ($) : <input type="text" name="gia" id="gia" [(ngModel)]="gia" placeholder="1.000.000 VND"></div>
+        <div>-DANH MỤC : <input type="text" name="danhmuc" id="danhmuc" [(ngModel)]="danhmuc" placeholder="Quần,áo,giày,dép nike"></div>
+        <button (click)="themsanpham()" class="btn btn-success them">MUA</button>
+        <!-- <button (click)="sua()" class="btn btn-warning">CẬP NHẬT</button> -->
+    </form>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th class="ten">TÊN</th>
+            <th>SỐ LƯỢNG</th>
+            <th class="gia">GIÁ($)</th>
+            <th>DANH MỤC</th>
+            <th>XÓA</th>
+            <th>STT</th>
+        </tr>
+        <tr *ngFor = "let item of banhang ; let i = index ">
+           
+            <td >{{item.id}}</td>
+            <td>{{item.ten}}</td>
+            <td>{{item.soluong}}</td>
+            <td>{{item.gia}}</td>
+            <td>{{item.danhmuc}}</td>
+            <td><button (click)="xoa()" class="btn btn-danger">XÓA</button></td>
+            <td >{{i}}</td>
+        </tr>
+    </table>
+</section>
+</div>

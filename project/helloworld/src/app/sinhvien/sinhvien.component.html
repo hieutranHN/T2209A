@@ -1,0 +1,91 @@
+<div style="background:lightblue">
+  <div class="header" style="background:rgb(81, 62, 187);color:white" >
+<h1 style="color:rgba(253, 36, 36, 0.856); text-align: center;">ANGULAR-2</h1><br>
+<h1 style="color:balck; text-align: center;">QUẢN LÝ SINH VIÊN LỚP T2209A</h1><br>
+<p style="text-align:center;color:rgb(2, 2, 2)">********************************************************</p>
+<br>
+</div>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label >ID</label>
+        <input type="number" class="form-control"
+               id="id" name="id"  required [(ngModel)]="id" >
+      </div>
+      <div class="form-group">
+        <label >NAME</label>
+        <input type="text" class="form-control" id="name"
+               name="name"  required [(ngModel)]="name" >
+      </div>
+      <div class="form-group">
+        <label >ADDRESS</label>
+        <input type="text" class="form-control" id="address"
+               name="address" [(ngModel)]="address" >
+      </div>
+      <div class="form-group">
+        <label >TEL</label>
+        <input type="text" class="form-control" id="tel"
+               name="tel" [(ngModel)]="tel" >
+      </div>
+      <div class="form-group">
+        <label >EMAIL</label>
+        <input type="text" class="form-control" id="email"
+               name="email" [(ngModel)]="email" >
+      </div>
+      <div class="form-group">
+        <label >SALARY</label>
+        <input type="text" class="form-control" id="salary"
+               name="salary" [(ngModel)]="salary" >
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" class="btn btn-success" value="Save" (click)="themmoisinhvien() ">SAVE</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" class="btn btn-warning" value="Update" (click)="suasinhvien_capnhat() ">UPDATE</button>
+          </div>
+      <br>
+      <br>  
+    </div>
+    </div>
+    </form>
+  </div>
+  <br>
+  <br>
+  <div class="container">
+  <h3 style="text-align:center;">TABLE DATA</h3>
+  <br>
+ <table class="table">
+  <tr>  
+    <th>ID</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Tel</th>
+    <th>Email</th>
+    <th>Salary</th>
+    <th>Delete And Edit</th>
+  </tr>
+  <tr *ngFor="let sinhvien of listSinhVien">  
+    <th>{{sinhvien.id}}</th>
+    <th>{{sinhvien.name}}</th>
+    <th>{{sinhvien.address}}</th>
+    <th>{{sinhvien.tel}}</th>
+    <th>{{sinhvien.email}}</th>
+    <th>{{sinhvien.salary}}</th>
+  
+    <input type="button" value="xóa" (click)="xoasinhvien(sinhvien.id)"> 
+    <input type="button" value="sửa" (click)="suasinhvien(sinhvien.id)"> 
+
+  </tr>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+ 
